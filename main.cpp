@@ -5,6 +5,9 @@
 #include <QMediaPlayer>
 #include <QAudioOutput>
 #include "ui_audioplayer.h"
+using namespace std;
+
+const QString currentAudio = "misato.wav";
 int main() {
     int argc = 0;                    // Define a dummy argc
     char *argv[] = { nullptr };
@@ -16,6 +19,9 @@ int main() {
     QMediaPlayer *player = new QMediaPlayer();
     QAudioOutput *audioOutput = new QAudioOutput();
     player->setAudioOutput(audioOutput);
+
+    QString filePath = QCoreApplication::applicationDirPath() + "/misato.wav";
+    player->setSource(QUrl::fromLocalFile(filePath));
 
     QObject::connect(ui.playButton, &QPushButton::clicked, player, &QMediaPlayer::play);
     QObject::connect(ui.pauseButton, &QPushButton::clicked, player, &QMediaPlayer::pause);
