@@ -4,32 +4,33 @@ int main() {
     // Initialize the window and audio device
     InitWindow(800, 450, "Simple Audio Player with Raylib");
     InitAudioDevice();  // Initialize the audio device
+    Music music = LoadMusicStream("../misato.wav");
+    float pitch = 1.1f;
+    PlayMusicStream(music);
 
-    Sound sound = LoadSound("../misato.wav");  // You can replace this with your own audio file
-
-    // Main game loop
+    SetTargetFPS(60);
     while (!WindowShouldClose()) {
-        // Play sound on spacebar press
-        if (IsKeyPressed(KEY_SPACE)) {
-            PlaySound(sound);
-        }
+        UpdateMusicStream(music);
+        SetMusicPitch(music, pitch);
 
-        // Stop sound on enter press
-        if (IsKeyPressed(KEY_ENTER)) {
-            StopSound(sound);
+        // Control play/pause with SPACE key
+        if (IsKeyPressed(KEY_SPACE)) {
+            if (IsMusicStreamPlaying(music)) PauseMusicStream(music);
+            else ResumeMusicStream(music);
         }
+        if (IsKeyPressed(KEY_ENTER)) StopMusicStream(music);
 
         // Begin drawing
         BeginDrawing();
         ClearBackground(RAYWHITE);
-        DrawText(sound,120,150,20,GREEN);
+        DrawText("Playing Music", 120, 150, 20, GREEN);
         DrawText("Press SPACE to play sound, ENTER to stop", 120, 200, 20, DARKGRAY);
 
         EndDrawing();
     }
 
     // Unload sound and close audio device
-    UnloadSound(sound);
+    UnloadMusicStream(music);
     CloseAudioDevice();  // Close the audio device
     CloseWindow();       // Close window
 
