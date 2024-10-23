@@ -31,7 +31,7 @@ int main() {
         
         DrawText("Playing Music", 120, 150, 20, GREEN);
         DrawText("Press SPACE to play sound, ENTER to stop", 120, 200, 20, DARKGRAY);
-        DrawText("Designed By M.Winer 2024".120,425,10,BLACK);
+        DrawText("Designed By M.Winer 2024",120,425,10,BLACK);
 
         EndDrawing();
     }
