@@ -23,7 +23,8 @@ include_directories(${raylib_SOURCE_DIR}/src)
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
 # Project sources
-add_executable(TerminalAudacity main.cpp)
+add_executable(TerminalAudacity main.cpp
+)
 
 # Link Raylib to the project
 target_link_libraries(TerminalAudacity PRIVATE raylib)
