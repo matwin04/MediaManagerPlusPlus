@@ -1,30 +1,16 @@
-cmake_minimum_required(VERSION 3.29)
+cmake_minimum_required(VERSION 3.10)
+project(terminalaudacity)
 
-project(TerminalAudacity)
+# Enable automatic handling of UI files
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
 
-# Set C++ standard
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
+# Find the installed Qt package
+find_package(Qt6 REQUIRED COMPONENTS Widgets Multimedia)
 
-# Fetch Raylib using CMake's FetchContent
-include(FetchContent)
+# Add the executable and specify the UI file
+add_executable(${PROJECT_NAME} main.cpp audioplayer.ui)
 
-FetchContent_Declare(
-        raylib
-        GIT_REPOSITORY https://github.com/raysan5/raylib.git
-        GIT_TAG master
-)
-
-# Make Raylib available
-FetchContent_MakeAvailable(raylib)
-
-# Include directories for Raylib and Raygui
-include_directories(${raylib_SOURCE_DIR}/src)
-include_directories(${PROJECT_SOURCE_DIR}/include)
-
-# Project sources
-add_executable(TerminalAudacity main.cpp
-)
-
-# Link Raylib to the project
-target_link_libraries(TerminalAudacity PRIVATE raylib)
+# Link the Qt Widgets library
+target_link_libraries(${PROJECT_NAME} Qt6::Widgets Qt6::Multimedia)
