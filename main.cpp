@@ -21,6 +21,7 @@ int main() {
     player->setAudioOutput(audioOutput);
 
     QString filePath = QCoreApplication::applicationDirPath() + "/misato.wav";
+    printf("Media File Loaded: %s\n", filePath.toLocal8Bit().data());
     player->setSource(QUrl::fromLocalFile(filePath));
 
     QObject::connect(ui.playButton, &QPushButton::clicked, player, &QMediaPlayer::play);
