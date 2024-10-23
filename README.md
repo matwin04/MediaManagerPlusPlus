@@ -1,2 +1,2 @@
-# midi-
+# midi++
 Midi++ Midi Player
