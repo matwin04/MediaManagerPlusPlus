@@ -42,17 +42,20 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    # Ubuntu Setup
     - name: Install dependencies on Ubuntu
       if: matrix.os == 'ubuntu-latest'
       run: |
         sudo apt-get update
-        sudo apt-get install -y qt6-base-dev qt6-tools-dev-tools qt6-multimedia-dev libgl1-mesa-dev libtag1-dev
+        sudo apt-get install -y libtag1-dev qt6-base-dev qt6-tools-dev-tools qt6-multimedia-dev libgl1-mesa-dev
 
+    # macOS Setup
     - name: Install dependencies on macOS
       if: matrix.os == 'macos-latest'
       run: |
         brew install qt taglib
 
+    # Windows Setup using vcpkg
     - name: Install dependencies using vcpkg on Windows
       if: matrix.os == 'windows-latest'
       run: |
