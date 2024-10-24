@@ -1,6 +1,3 @@
-# TerminalAudacity
-**Raylib / Raygui Audio Player**
-Built with C++
+# MediaManager++
 
 
-And Yes 
