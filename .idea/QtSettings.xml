@@ -12,6 +12,14 @@
             </PerProfileState>
           </value>
         </entry>
+        <entry key="Debug-event-trace">
+          <value>
+            <PerProfileState>
+              <option name="myQmlPath" value="/opt/homebrew/share/qt/qml" />
+              <option name="myQtBinPath" value="/opt/homebrew/bin" />
+            </PerProfileState>
+          </value>
+        </entry>
       </map>
     </option>
   </component>
