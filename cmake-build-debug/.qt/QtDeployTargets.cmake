@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_MediaManagerPlusPlus_FILE /Users/frostie/CLionProjects/MediaManagerPlusPlus/cmake-build-debug/MediaManagerPlusPlus)
+set(__QT_DEPLOY_TARGET_MediaManagerPlusPlus_TYPE EXECUTABLE)

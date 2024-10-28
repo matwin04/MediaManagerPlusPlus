@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "MediaManagerPlusPlus",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "MediaManagerPlusPlus::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MediaManagerPlusPlus-Debug-6ba39bd76133037da6b8.json",
+					"name" : "MediaManagerPlusPlus",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "MediaManagerPlusPlus_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MediaManagerPlusPlus_autogen-Debug-bb989107a958cebd28f1.json",
+					"name" : "MediaManagerPlusPlus_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "MediaManagerPlusPlus_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MediaManagerPlusPlus_autogen_timestamp_deps-Debug-cc8fbf128f2a5b9040f4.json",
+					"name" : "MediaManagerPlusPlus_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/frostie/CLionProjects/MediaManagerPlusPlus/cmake-build-debug",
+		"source" : "/Users/frostie/CLionProjects/MediaManagerPlusPlus"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

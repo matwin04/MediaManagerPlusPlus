@@ -1,0 +1,5 @@
+/Users/frostie/CLionProjects/MediaManagerPlusPlus/cmake-build-debug/CMakeFiles/MediaManagerPlusPlus.dir
+/Users/frostie/CLionProjects/MediaManagerPlusPlus/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/frostie/CLionProjects/MediaManagerPlusPlus/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/frostie/CLionProjects/MediaManagerPlusPlus/cmake-build-debug/CMakeFiles/MediaManagerPlusPlus_autogen_timestamp_deps.dir
+/Users/frostie/CLionProjects/MediaManagerPlusPlus/cmake-build-debug/CMakeFiles/MediaManagerPlusPlus_autogen.dir

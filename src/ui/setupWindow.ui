@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <class>SetupWindow</class>
+    <widget class="QDialog" name="SetupWindow">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>400</width>
+                <height>250</height>
+            </rect>
+        </property>
+        <property name="windowTitle">
+            <string>Setup Database and Folders</string>
+        </property>
+        <widget class="QWidget" name="centralwidget">
+            <layout class="QVBoxLayout" name="verticalLayout">
+                <item>
+                    <widget class="QLabel" name="label">
+                        <property name="text">
+                            <string>Base Folder Location:</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QLineEdit" name="folderPathEdit"/>
+                </item>
+                <item>
+                    <widget class="QPushButton" name="browseButton">
+                        <property name="text">
+                            <string>Browse</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QLabel" name="label_2">
+                        <property name="text">
+                            <string>Database Name:</string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QLineEdit" name="databaseNameEdit"/>
+                </item>
+                <item>
+                    <widget class="QPushButton" name="saveButton">
+                        <property name="text">
+                            <string>Save</string>
+                        </property>
+                    </widget>
+                </item>
+            </layout>
+        </widget>
+    </widget>
+    <resources/>
+    <connections/>
+</ui>

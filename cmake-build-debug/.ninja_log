@@ -1,0 +1,15 @@
+# ninja log v6
+1149	1355	1730153455757394072	MediaManagerPlusPlus	989ffcb8a39f5711
+145	1145	1730153454752931862	CMakeFiles/MediaManagerPlusPlus.dir/src/main.cpp.o	23f0efdf4c1371a9
+144	180	1730153454752627121	CMakeFiles/MediaManagerPlusPlus.dir/MediaManagerPlusPlus_autogen/mocs_compilation.cpp.o	1ecfa7b3338abe0c
+2	143	1730153454741181160	/Users/frostie/CLionProjects/MediaManagerPlusPlus/cmake-build-debug/MediaManagerPlusPlus_autogen/timestamp	45ba3dbdeef7c4ec
+2	143	1730153454741181160	MediaManagerPlusPlus_autogen/mocs_compilation.cpp	45ba3dbdeef7c4ec
+2	143	1730153454741181160	/Users/frostie/CLionProjects/MediaManagerPlusPlus/cmake-build-debug/MediaManagerPlusPlus_autogen/mocs_compilation.cpp	45ba3dbdeef7c4ec
+2	143	1730153454741181160	MediaManagerPlusPlus_autogen/timestamp	45ba3dbdeef7c4ec
+7	585	1730153543664877870	build.ninja	58ae17bf356f0a37
+6	39	1730153543692107292	MediaManagerPlusPlus_autogen/timestamp	45ba3dbdeef7c4ec
+6	39	1730153543692107292	MediaManagerPlusPlus_autogen/mocs_compilation.cpp	45ba3dbdeef7c4ec
+6	39	1730153543692107292	/Users/frostie/CLionProjects/MediaManagerPlusPlus/cmake-build-debug/MediaManagerPlusPlus_autogen/timestamp	45ba3dbdeef7c4ec
+6	39	1730153543692107292	/Users/frostie/CLionProjects/MediaManagerPlusPlus/cmake-build-debug/MediaManagerPlusPlus_autogen/mocs_compilation.cpp	45ba3dbdeef7c4ec
+39	1371	1730153543725244627	CMakeFiles/MediaManagerPlusPlus.dir/src/main.cpp.o	23f0efdf4c1371a9
+1372	1605	1730153545057314046	MediaManagerPlusPlus	989ffcb8a39f5711
