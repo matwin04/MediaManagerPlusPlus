@@ -6,30 +6,90 @@
             <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>600</width>
-                <height>400</height>
+                <width>800</width>
+                <height>600</height>
             </rect>
         </property>
         <property name="windowTitle">
-            <string>Table Display with Grid Layout</string>
+            <string>Media Manager</string>
         </property>
         <widget class="QWidget" name="centralwidget">
-            <layout class="QGridLayout" name="gridLayout">
-                <item row="0" column="0" colspan="2">
-                    <widget class="QTableView" name="tableView"/>
-                </item>
-                <item row="1" column="0">
-                    <widget class="QPushButton" name="loadButton">
-                        <property name="text">
-                            <string>Load Data</string>
+            <layout class="QVBoxLayout" name="verticalLayout">
+                <item>
+                    <widget class="QTabWidget" name="tabWidget">
+                        <property name="tabPosition">
+                            <enum>QTabWidget::North</enum>
                         </property>
-                    </widget>
-                </item>
-                <item row="1" column="1">
-                    <widget class="QPushButton" name="clearButton">
-                        <property name="text">
-                            <string>Clear Data</string>
-                        </property>
+                        <widget class="QWidget" name="musicTab">
+                            <attribute name="title">
+                                <string>Music</string>
+                            </attribute>
+                            <layout class="QVBoxLayout" name="musicLayout">
+                                <item>
+                                    <widget class="QTableView" name="musicTableView"/>
+                                </item>
+                            </layout>
+                        </widget>
+                        <widget class="QWidget" name="moviesTab">
+                            <attribute name="title">
+                                <string>Movies</string>
+                            </attribute>
+                            <layout class="QVBoxLayout" name="moviesLayout">
+                                <item>
+                                    <widget class="QTableView" name="moviesTableView"/>
+                                </item>
+                            </layout>
+                        </widget>
+                        <widget class="QWidget" name="tvTab">
+                            <attribute name="title">
+                                <string>TV Shows</string>
+                            </attribute>
+                            <layout class="QVBoxLayout" name="tvLayout">
+                                <item>
+                                    <widget class="QTableView" name="tvTableView"/>
+                                </item>
+                            </layout>
+                        </widget>
+                        <widget class="QWidget" name="photosTab">
+                            <attribute name="title">
+                                <string>Photos</string>
+                            </attribute>
+                            <layout class="QVBoxLayout" name="photosLayout">
+                                <item>
+                                    <widget class="QTableView" name="photosTableView"/>
+                                </item>
+                            </layout>
+                        </widget>
+                        <widget class="QWidget" name="videosTab">
+                            <attribute name="title">
+                                <string>Videos</string>
+                            </attribute>
+                            <layout class="QVBoxLayout" name="videosLayout">
+                                <item>
+                                    <widget class="QTableView" name="videosTableView"/>
+                                </item>
+                            </layout>
+                        </widget>
+                        <widget class="QWidget" name="podcastsTab">
+                            <attribute name="title">
+                                <string>Podcasts</string>
+                            </attribute>
+                            <layout class="QVBoxLayout" name="podcastsLayout">
+                                <item>
+                                    <widget class="QTableView" name="podcastsTableView"/>
+                                </item>
+                            </layout>
+                        </widget>
+                        <widget class="QWidget" name="gamesTab">
+                            <attribute name="title">
+                                <string>Games</string>
+                            </attribute>
+                            <layout class="QVBoxLayout" name="gamesLayout">
+                                <item>
+                                    <widget class="QTableView" name="gamesTableView"/>
+                                </item>
+                            </layout>
+                        </widget>
                     </widget>
                 </item>
             </layout>
