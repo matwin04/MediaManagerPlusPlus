@@ -13,6 +13,13 @@ find_package(Qt6 REQUIRED COMPONENTS Widgets Sql)
 # Add the executable
 add_executable(${PROJECT_NAME}
         src/main.cpp
+        src/browser.cpp
+        src/browser.h
+        src/browser.ui
+        src/databasehandler.cpp
+        src/databasehandler.h
+        src/filemanager.cpp
+        src/filemanager.h
 )
 
 # Link the required libraries

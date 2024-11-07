@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <author/>
+    <comment/>
+    <exportmacro/>
+    <class>browser</class>
+    <widget class="QMainWindow" name="browser">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>400</width>
+                <height>300</height>
+            </rect>
+        </property>
+        <property name="windowTitle">
+            <string>browser</string>
+        </property>
+        <widget class="QWidget" name="centralwidget"/>
+        <widget class="QMenuBar" name="menubar">
+            <property name="geometry">
+                <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>400</width>
+                    <height>17</height>
+                </rect>
+            </property>
+        </widget>
+        <widget class="QWidget" name="centralwidget">
+            <layout class="QVBoxLayout" name="verticalLayout">
+                <item>
+                    <widget class="QPushButton" name="addFileButton">
+                        <property name="text">
+                            <string>Add File</string>
+                        </property>
+                    </widget>
+                </item>
+            </layout>
+        </widget>
+
+        <widget class="QStatusBar" name="statusbar"/>
+    </widget>
+    <pixmapfunction/>
+    <connections/>
+</ui>
