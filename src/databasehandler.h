@@ -9,7 +9,7 @@ class databasehandler : public QObject {
 
 public:
   explicit databasehandler(QObject *parent = nullptr);
-  bool addFileToDatabase(const QString &filePath, const QString &artist, const QString &album);
+  bool addAudioToDatabase(const QString &filePath, const QString &artist, const QString &album, const QString &trackName); // Updated to include trackName
 
 private:
   QSqlDatabase db;

@@ -12,8 +12,8 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class browser; }
 QT_END_NAMESPACE
 
-class DatabaseHandler;
-class FileManager;
+class databasehandler;
+class filemanager;
 class browser : public QMainWindow {
     Q_OBJECT
 
@@ -24,8 +24,8 @@ private slots:
     void on_addFileButton_clicked();
 private:
     Ui::browser *ui;
-    DatabaseHandler *dbHandler;
-    FileManager *fileManager;
+    databasehandler *dbHandler;
+    filemanager *fileManager;
 };
 
 
