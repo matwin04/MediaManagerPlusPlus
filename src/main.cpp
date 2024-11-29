@@ -1,9 +1,7 @@
-#include "browser.h"
-#include <QApplication>
-
-int main(int argc, char *argv[]) {
-    QApplication a(argc, argv);
-    browser w;
-    w.show();
-    return a.exec();
+#include <iostream>
+using namespace std;
+int main(){
+    cout << "Hello World\n";
+    cout << "MediaManager ++ version 1\n";
+    return 0;
 }

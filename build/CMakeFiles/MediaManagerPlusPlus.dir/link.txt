@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/MediaManagerPlusPlus.dir/src/main.cpp.o -o MediaManagerPlusPlus  vcpkg_installed/x64-linux/debug/lib/libftxui-screen.a vcpkg_installed/x64-linux/debug/lib/libftxui-dom.a vcpkg_installed/x64-linux/debug/lib/libftxui-component.a vcpkg_installed/x64-linux/debug/lib/libftxui-dom.a vcpkg_installed/x64-linux/debug/lib/libftxui-screen.a 

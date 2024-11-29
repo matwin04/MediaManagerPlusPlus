@@ -1,0 +1,15 @@
+Detecting compiler hash for triplet x64-linux...
+Compiler found: /usr/bin/c++
+All requested packages are currently installed.
+Total install time: 350 ns
+ftxui provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(ftxui CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE ftxui::dom ftxui::screen ftxui::component)
+
+ftxui provides pkg-config modules:
+
+  # C++ Functional Terminal User Interface.
+  ftxui
+
