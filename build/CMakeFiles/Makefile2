@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/mwiner/projects/MediaManagerPlusPlus/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/MediaManagerPlusPlus.dir/all
+all: CMakeFiles/MediaManager++.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/MediaManagerPlusPlus.dir/clean
+clean: CMakeFiles/MediaManager++.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/MediaManagerPlusPlus.dir
+# Target rules for target CMakeFiles/MediaManager++.dir
 
 # All Build rule for target.
-CMakeFiles/MediaManagerPlusPlus.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MediaManagerPlusPlus.dir/build.make CMakeFiles/MediaManagerPlusPlus.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MediaManagerPlusPlus.dir/build.make CMakeFiles/MediaManagerPlusPlus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mwiner/projects/MediaManagerPlusPlus/build/CMakeFiles --progress-num=1,2 "Built target MediaManagerPlusPlus"
-.PHONY : CMakeFiles/MediaManagerPlusPlus.dir/all
+CMakeFiles/MediaManager++.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MediaManager++.dir/build.make CMakeFiles/MediaManager++.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MediaManager++.dir/build.make CMakeFiles/MediaManager++.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mwiner/projects/MediaManagerPlusPlus/build/CMakeFiles --progress-num=1,2 "Built target MediaManager++"
+.PHONY : CMakeFiles/MediaManager++.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/MediaManagerPlusPlus.dir/rule: cmake_check_build_system
+CMakeFiles/MediaManager++.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mwiner/projects/MediaManagerPlusPlus/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MediaManagerPlusPlus.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MediaManager++.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mwiner/projects/MediaManagerPlusPlus/build/CMakeFiles 0
-.PHONY : CMakeFiles/MediaManagerPlusPlus.dir/rule
+.PHONY : CMakeFiles/MediaManager++.dir/rule
 
 # Convenience name for target.
-MediaManagerPlusPlus: CMakeFiles/MediaManagerPlusPlus.dir/rule
-.PHONY : MediaManagerPlusPlus
+MediaManager++: CMakeFiles/MediaManager++.dir/rule
+.PHONY : MediaManager++
 
 # clean rule for target.
-CMakeFiles/MediaManagerPlusPlus.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MediaManagerPlusPlus.dir/build.make CMakeFiles/MediaManagerPlusPlus.dir/clean
-.PHONY : CMakeFiles/MediaManagerPlusPlus.dir/clean
+CMakeFiles/MediaManager++.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MediaManager++.dir/build.make CMakeFiles/MediaManager++.dir/clean
+.PHONY : CMakeFiles/MediaManager++.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
