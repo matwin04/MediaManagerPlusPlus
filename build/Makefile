@@ -129,6 +129,54 @@ MediaManager++/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MediaManager++.dir/build.make CMakeFiles/MediaManager++.dir/build
 .PHONY : MediaManager++/fast
 
+src/MediaServer.o: src/MediaServer.cpp.o
+.PHONY : src/MediaServer.o
+
+# target to build an object file
+src/MediaServer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MediaManager++.dir/build.make CMakeFiles/MediaManager++.dir/src/MediaServer.cpp.o
+.PHONY : src/MediaServer.cpp.o
+
+src/MediaServer.i: src/MediaServer.cpp.i
+.PHONY : src/MediaServer.i
+
+# target to preprocess a source file
+src/MediaServer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MediaManager++.dir/build.make CMakeFiles/MediaManager++.dir/src/MediaServer.cpp.i
+.PHONY : src/MediaServer.cpp.i
+
+src/MediaServer.s: src/MediaServer.cpp.s
+.PHONY : src/MediaServer.s
+
+# target to generate assembly for a file
+src/MediaServer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MediaManager++.dir/build.make CMakeFiles/MediaManager++.dir/src/MediaServer.cpp.s
+.PHONY : src/MediaServer.cpp.s
+
+src/UUIDGen.o: src/UUIDGen.cpp.o
+.PHONY : src/UUIDGen.o
+
+# target to build an object file
+src/UUIDGen.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MediaManager++.dir/build.make CMakeFiles/MediaManager++.dir/src/UUIDGen.cpp.o
+.PHONY : src/UUIDGen.cpp.o
+
+src/UUIDGen.i: src/UUIDGen.cpp.i
+.PHONY : src/UUIDGen.i
+
+# target to preprocess a source file
+src/UUIDGen.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MediaManager++.dir/build.make CMakeFiles/MediaManager++.dir/src/UUIDGen.cpp.i
+.PHONY : src/UUIDGen.cpp.i
+
+src/UUIDGen.s: src/UUIDGen.cpp.s
+.PHONY : src/UUIDGen.s
+
+# target to generate assembly for a file
+src/UUIDGen.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MediaManager++.dir/build.make CMakeFiles/MediaManager++.dir/src/UUIDGen.cpp.s
+.PHONY : src/UUIDGen.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -162,6 +210,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MediaManager++"
+	@echo "... src/MediaServer.o"
+	@echo "... src/MediaServer.i"
+	@echo "... src/MediaServer.s"
+	@echo "... src/UUIDGen.o"
+	@echo "... src/UUIDGen.i"
+	@echo "... src/UUIDGen.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

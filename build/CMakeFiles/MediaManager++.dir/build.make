@@ -83,14 +83,46 @@ CMakeFiles/MediaManager++.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MediaManager++.dir/src/main.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mwiner/projects/MediaManagerPlusPlus/src/main.cpp -o CMakeFiles/MediaManager++.dir/src/main.cpp.s
 
+CMakeFiles/MediaManager++.dir/src/MediaServer.cpp.o: CMakeFiles/MediaManager++.dir/flags.make
+CMakeFiles/MediaManager++.dir/src/MediaServer.cpp.o: /home/mwiner/projects/MediaManagerPlusPlus/src/MediaServer.cpp
+CMakeFiles/MediaManager++.dir/src/MediaServer.cpp.o: CMakeFiles/MediaManager++.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mwiner/projects/MediaManagerPlusPlus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MediaManager++.dir/src/MediaServer.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MediaManager++.dir/src/MediaServer.cpp.o -MF CMakeFiles/MediaManager++.dir/src/MediaServer.cpp.o.d -o CMakeFiles/MediaManager++.dir/src/MediaServer.cpp.o -c /home/mwiner/projects/MediaManagerPlusPlus/src/MediaServer.cpp
+
+CMakeFiles/MediaManager++.dir/src/MediaServer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MediaManager++.dir/src/MediaServer.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mwiner/projects/MediaManagerPlusPlus/src/MediaServer.cpp > CMakeFiles/MediaManager++.dir/src/MediaServer.cpp.i
+
+CMakeFiles/MediaManager++.dir/src/MediaServer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MediaManager++.dir/src/MediaServer.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mwiner/projects/MediaManagerPlusPlus/src/MediaServer.cpp -o CMakeFiles/MediaManager++.dir/src/MediaServer.cpp.s
+
+CMakeFiles/MediaManager++.dir/src/UUIDGen.cpp.o: CMakeFiles/MediaManager++.dir/flags.make
+CMakeFiles/MediaManager++.dir/src/UUIDGen.cpp.o: /home/mwiner/projects/MediaManagerPlusPlus/src/UUIDGen.cpp
+CMakeFiles/MediaManager++.dir/src/UUIDGen.cpp.o: CMakeFiles/MediaManager++.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mwiner/projects/MediaManagerPlusPlus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MediaManager++.dir/src/UUIDGen.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MediaManager++.dir/src/UUIDGen.cpp.o -MF CMakeFiles/MediaManager++.dir/src/UUIDGen.cpp.o.d -o CMakeFiles/MediaManager++.dir/src/UUIDGen.cpp.o -c /home/mwiner/projects/MediaManagerPlusPlus/src/UUIDGen.cpp
+
+CMakeFiles/MediaManager++.dir/src/UUIDGen.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MediaManager++.dir/src/UUIDGen.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mwiner/projects/MediaManagerPlusPlus/src/UUIDGen.cpp > CMakeFiles/MediaManager++.dir/src/UUIDGen.cpp.i
+
+CMakeFiles/MediaManager++.dir/src/UUIDGen.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MediaManager++.dir/src/UUIDGen.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mwiner/projects/MediaManagerPlusPlus/src/UUIDGen.cpp -o CMakeFiles/MediaManager++.dir/src/UUIDGen.cpp.s
+
 # Object files for target MediaManager++
 MediaManager_______OBJECTS = \
-"CMakeFiles/MediaManager++.dir/src/main.cpp.o"
+"CMakeFiles/MediaManager++.dir/src/main.cpp.o" \
+"CMakeFiles/MediaManager++.dir/src/MediaServer.cpp.o" \
+"CMakeFiles/MediaManager++.dir/src/UUIDGen.cpp.o"
 
 # External object files for target MediaManager++
 MediaManager_______EXTERNAL_OBJECTS =
 
 MediaManager++: CMakeFiles/MediaManager++.dir/src/main.cpp.o
+MediaManager++: CMakeFiles/MediaManager++.dir/src/MediaServer.cpp.o
+MediaManager++: CMakeFiles/MediaManager++.dir/src/UUIDGen.cpp.o
 MediaManager++: CMakeFiles/MediaManager++.dir/build.make
 MediaManager++: vcpkg_installed/x64-linux/debug/lib/libftxui-screen.a
 MediaManager++: vcpkg_installed/x64-linux/debug/lib/libftxui-dom.a
@@ -98,7 +130,7 @@ MediaManager++: vcpkg_installed/x64-linux/debug/lib/libftxui-component.a
 MediaManager++: vcpkg_installed/x64-linux/debug/lib/libftxui-dom.a
 MediaManager++: vcpkg_installed/x64-linux/debug/lib/libftxui-screen.a
 MediaManager++: CMakeFiles/MediaManager++.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mwiner/projects/MediaManagerPlusPlus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable MediaManager++"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mwiner/projects/MediaManagerPlusPlus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable MediaManager++"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MediaManager++.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

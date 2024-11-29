@@ -8,7 +8,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(ftxui 5 REQUIRED)
 include_directories(/usr/include)
 link_directories(/usr/lib)
-add_executable(${PROJECT_NAME} src/main.cpp)
+
+file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/resources/MediaServer.xml"
+	DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/")
+add_executable(${PROJECT_NAME} 
+    src/main.cpp
+    src/MediaServer.cpp
+    src/UUIDGen.cpp
+)
 target_link_libraries(${PROJECT_NAME}
   PRIVATE ftxui::screen
   PRIVATE ftxui::dom

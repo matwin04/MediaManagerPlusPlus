@@ -1,32 +1,45 @@
 #include <iostream>
-#include <ftxui/component/component.hpp>
-#include <ftxui/component/screen_interactive.hpp>
 #include "MediaServer.h"
-using namespace std;
-using namespace ftxui;
 
-int main(){
-    auto startBtn = Button("Start Server",[&]{});
-    auto stopBtn = Button("Stop Button",[&]{});
-    auto quitBtn = Button("Quit", [&]{});
-    auto layout = Container::Vertical({
-        startBtn,
-        stopBtn,
-        quitBtn,
-    });
-    auto renderer = Renderer(layout, [&] {
-        return vbox({
-            text("DLNA Media Server CLI") | center,
-            separator(),
-            startBtn->Render(),
-            stopBtn->Render(),
-            quitBtn->Render(),
-        });
-    });
+void show_menu() {
+    std::cout << "\n\nDLNA Media Server CLI\n";
+    std::cout << "1. Start Server\n";
+    std::cout << "2. Stop Server\n";
+    std::cout << "3. Exit\n";
+    std::cout << "Enter your choice: ";
 
-    auto screen = ScreenInteractive::TerminalOutput();
-    screen.Loop(renderer);
-    cout << "Hello World\n";
-    cout << "MediaManager ++ version 1\n";
+}
+
+int main() {
+    MediaServer server;
+    int choice = 0;
+
+    while (choice != 3) {
+        show_menu();
+        std::cin >> choice;
+
+        switch (choice) {
+            case 1:
+                if (server.start()) {
+                    std::cout << "Server started successfully.\n";
+                } else {
+                    std::cerr << "Failed to start the server.\n";
+                }
+                break;
+
+            case 2:
+                server.stop();
+                std::cout << "Server stopped.\n";
+                break;
+
+            case 3:
+                std::cout << "Exiting...\n";
+                break;
+
+            default:
+                std::cerr << "Invalid choice. Try again.\n";
+        }
+    }
+
     return 0;
 }

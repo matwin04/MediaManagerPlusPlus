@@ -81,12 +81,12 @@ clean: CMakeFiles/MediaManager++.dir/clean
 CMakeFiles/MediaManager++.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MediaManager++.dir/build.make CMakeFiles/MediaManager++.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MediaManager++.dir/build.make CMakeFiles/MediaManager++.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mwiner/projects/MediaManagerPlusPlus/build/CMakeFiles --progress-num=1,2 "Built target MediaManager++"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/mwiner/projects/MediaManagerPlusPlus/build/CMakeFiles --progress-num=1,2,3,4 "Built target MediaManager++"
 .PHONY : CMakeFiles/MediaManager++.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/MediaManager++.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mwiner/projects/MediaManagerPlusPlus/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mwiner/projects/MediaManagerPlusPlus/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MediaManager++.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mwiner/projects/MediaManagerPlusPlus/build/CMakeFiles 0
 .PHONY : CMakeFiles/MediaManager++.dir/rule

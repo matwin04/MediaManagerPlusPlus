@@ -1,7 +1,7 @@
 Detecting compiler hash for triplet x64-linux...
 Compiler found: /usr/bin/c++
 All requested packages are currently installed.
-Total install time: 200 ns
+Total install time: 160 ns
 ftxui provides CMake targets:
 
   # this is heuristically generated, and may not be correct

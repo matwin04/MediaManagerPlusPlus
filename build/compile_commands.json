@@ -4,5 +4,17 @@
   "command": "/usr/bin/g++  -isystem /home/mwiner/projects/MediaManagerPlusPlus/build/vcpkg_installed/x64-linux/include -g -std=gnu++17 -o CMakeFiles/MediaManager++.dir/src/main.cpp.o -c /home/mwiner/projects/MediaManagerPlusPlus/src/main.cpp",
   "file": "/home/mwiner/projects/MediaManagerPlusPlus/src/main.cpp",
   "output": "CMakeFiles/MediaManager++.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/mwiner/projects/MediaManagerPlusPlus/build",
+  "command": "/usr/bin/g++  -isystem /home/mwiner/projects/MediaManagerPlusPlus/build/vcpkg_installed/x64-linux/include -g -std=gnu++17 -o CMakeFiles/MediaManager++.dir/src/MediaServer.cpp.o -c /home/mwiner/projects/MediaManagerPlusPlus/src/MediaServer.cpp",
+  "file": "/home/mwiner/projects/MediaManagerPlusPlus/src/MediaServer.cpp",
+  "output": "CMakeFiles/MediaManager++.dir/src/MediaServer.cpp.o"
+},
+{
+  "directory": "/home/mwiner/projects/MediaManagerPlusPlus/build",
+  "command": "/usr/bin/g++  -isystem /home/mwiner/projects/MediaManagerPlusPlus/build/vcpkg_installed/x64-linux/include -g -std=gnu++17 -o CMakeFiles/MediaManager++.dir/src/UUIDGen.cpp.o -c /home/mwiner/projects/MediaManagerPlusPlus/src/UUIDGen.cpp",
+  "file": "/home/mwiner/projects/MediaManagerPlusPlus/src/UUIDGen.cpp",
+  "output": "CMakeFiles/MediaManager++.dir/src/UUIDGen.cpp.o"
 }
 ]

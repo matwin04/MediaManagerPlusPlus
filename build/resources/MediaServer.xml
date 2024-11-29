@@ -1,0 +1,9 @@
+<root xmlns="urn:schemas-upnp-org:device-1-0">
+    <device>
+        <deviceType>urn:schemas-upnp-org:device:MediaServer:1</deviceType>
+        <friendlyName>MediaManager++</friendlyName>
+        <manufacturer>Your Name</manufacturer>
+        <modelName>MediaManager++</modelName>
+        <UDN>uuid:12345678-1234-5678-1234-567812345678</UDN>
+    </device>
+</root>

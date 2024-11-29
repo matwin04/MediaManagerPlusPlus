@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/mwiner/projects/MediaManagerPlusPlus/src/MediaServer.cpp" "CMakeFiles/MediaManager++.dir/src/MediaServer.cpp.o" "gcc" "CMakeFiles/MediaManager++.dir/src/MediaServer.cpp.o.d"
+  "/home/mwiner/projects/MediaManagerPlusPlus/src/UUIDGen.cpp" "CMakeFiles/MediaManager++.dir/src/UUIDGen.cpp.o" "gcc" "CMakeFiles/MediaManager++.dir/src/UUIDGen.cpp.o.d"
   "/home/mwiner/projects/MediaManagerPlusPlus/src/main.cpp" "CMakeFiles/MediaManager++.dir/src/main.cpp.o" "gcc" "CMakeFiles/MediaManager++.dir/src/main.cpp.o.d"
   )
 
