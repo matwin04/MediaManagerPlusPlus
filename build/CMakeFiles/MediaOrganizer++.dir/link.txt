@@ -1,1 +1,0 @@
-/usr/bin/g++ -g CMakeFiles/MediaOrganizer++.dir/src/main.cpp.o -o MediaOrganizer++  vcpkg_installed/x64-linux/debug/lib/libftxui-screen.a vcpkg_installed/x64-linux/debug/lib/libftxui-dom.a vcpkg_installed/x64-linux/debug/lib/libftxui-component.a -lupnp vcpkg_installed/x64-linux/debug/lib/libftxui-dom.a vcpkg_installed/x64-linux/debug/lib/libftxui-screen.a 
