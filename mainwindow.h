@@ -11,23 +11,17 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow() override;
 private slots:
-    void onFolderChanged(const QString &path);
-    void connectToEmby();
+    static void onFolderChanged(const QString &path);
+    static void connectToEmby();
 private:
     QFileSystemWatcher *fileWatcher;
     QSqlDatabase db;
+    static QString mediaFolder;
 
     void setupDatabase();
-    void scanAndOrganize();
     void createMediaFolder();
-    void addShowsTable();
-    void addShowsFolder();
-    void addMoviesTable();
-    void addMoviesFolder();
-    void addMusicFolder();
-    void addMusicTable();
-
-
+    void executeSql(const QString &filePath);
+    void addFolder(const QString &folderName);
 };
 
 #endif // MAINWINDOW_H

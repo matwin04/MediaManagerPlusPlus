@@ -1,51 +1,88 @@
 #include "mainwindow.h"
-#include <QFileDialog>
+#include <QDir>
+#include <QFile>
 #include <QSqlQuery>
-#include <QTreeView>
-#include <QMessageBox>
+#include <QSqlError>
 #include <iostream>
 
+QString MainWindow::mediaFolder = QDir::homePath() + "/mmpp";
 MainWindow::MainWindow(QWidget *parent)
         : QMainWindow(parent), fileWatcher(new QFileSystemWatcher(this)) {
     setupDatabase();
-    fileWatcher->addPath("/database");
-    connect(fileWatcher,&QFileSystemWatcher::directoryChanged,this, &MainWindow::onFolderChanged);
-
+    fileWatcher->addPath(mediaFolder);
+    connect(fileWatcher, &QFileSystemWatcher::directoryChanged, this, &MainWindow::onFolderChanged);
 }
 
 MainWindow::~MainWindow() {
     db.close();
+    delete fileWatcher;
 }
 void MainWindow::setupDatabase() {
+    createMediaFolder();
     db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("media.db");
-    if (!db.open()){
-        std::cout << "Error\n";
+    QString dbPath = mediaFolder + "/media.db";
+
+    std::cout << "Attempting to create or open database at " << dbPath.toStdString() << std::endl;
+    db.setDatabaseName(dbPath);
+
+    if (!db.open()) {
+        std::cerr << "Database Error: " << db.lastError().text().toStdString() << std::endl;
+        return;
+    } else {
+        std::cout << "Database opened successfully at " << dbPath.toStdString() << std::endl;
+    }
+
+
+
+    // Execute SQL files for tables
+    executeSql("./sql/shows.sql");
+    executeSql("./sql/movies.sql");
+    executeSql("./sql/music.sql");
+
+    // Create media subfolders
+    addFolder("shows");
+    addFolder("movies");
+    addFolder("music");
+}
+
+
+void MainWindow::addFolder(const QString &folderName) {
+    QDir newDir(mediaFolder + "/" + folderName);
+    if (!newDir.exists() && !newDir.mkpath(".")) {
+        std::cout << "ERROR\n";
+    }
+}
+void MainWindow::executeSql(const QString &filePath){
+    QFile file(filePath);
+    if (!file.open(QIODevice::ReadOnly|QIODevice::Text)){
+        std::cout << "File Error could not open .sql file\n";
         return;
     }
-    //Create the main folder
-    createMediaFolder();
-
     QSqlQuery query;
-    query.exec("CREATE TABLE IF NOT EXISTS media ("
-               "id INTEGER PRIMARY KEY, "
-               "artist TEXT, "
-               "album TEXT, "
-               "title TEXT, "
-               "path TEXT)");
-    std::cout << "DB CREATED\n";
-}
-void MainWindow::onFolderChanged(const QString &path) {
-    scanAndOrganize();
-}
-
-void MainWindow::scanAndOrganize() {
-    //
-}
-void MainWindow::connectToEmby() {
-    //
+    QString sql = file.readAll();
+    if (!query.exec(sql)) {
+        std::cerr << "SQL ERROR!!!!\n";
+        return;
+    }
 }
 
 void MainWindow::createMediaFolder() {
+    QDir mediaDir(mediaFolder);
+    if (!mediaDir.exists()){
+        if (!mediaDir.mkpath(".")) {
+            std::cout << "Error: Failed to create media folder @ " << mediaFolder.toStdString() << std::endl;
+        } else {
+            std::cout << "Media Folder Created Successfully " << mediaFolder.toStdString() << std::endl;
+        }
+    } else {
 
+    }
+}
+
+void MainWindow::onFolderChanged(const QString &path) {
+    std::cout << "Feature not yet implemented\n";
+}
+
+void MainWindow::connectToEmby() {
+    std::cout << "Feature not yet implemented\n";
 }
