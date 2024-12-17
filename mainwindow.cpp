@@ -1,20 +1,29 @@
 #include "mainwindow.h"
+#include "ui/ui_mainwindow.h"
 #include <QDir>
 #include <QFile>
 #include <QSqlQuery>
 #include <QSqlError>
+#include <QSqlTableModel>
 #include <iostream>
 
 QString MainWindow::mediaFolder = QDir::homePath() + "/mmpp";
 MainWindow::MainWindow(QWidget *parent)
-        : QMainWindow(parent), fileWatcher(new QFileSystemWatcher(this)) {
+        : QMainWindow(parent), ui(new Ui::MainWindow),fileWatcher(new QFileSystemWatcher(this)) {
+    ui->setupUi(this);
     setupDatabase();
+    //Populate tables
+    loadTableData("movies",ui->moviesTable);
+    loadTableData("music",ui->musicTable);
+    loadTableData("shows",ui->showsTable);
+    loadTableData("photos",ui->photoTable);
     fileWatcher->addPath(mediaFolder);
     connect(fileWatcher, &QFileSystemWatcher::directoryChanged, this, &MainWindow::onFolderChanged);
 }
 
 MainWindow::~MainWindow() {
     db.close();
+    delete ui;
     delete fileWatcher;
 }
 void MainWindow::setupDatabase() {
@@ -46,8 +55,18 @@ void MainWindow::setupDatabase() {
     addFolder("music");
     addFolder("photos");
 }
+void MainWindow::loadTableData(const QString &tableName, QTableView *tableView) {
+    QSqlTableModel *model = new QSqlTableModel(this, db);
+    model->setTable(tableName);
+    model->select();  // Fetch all data from the table
 
+    tableView->setModel(model);
 
+    // Resize all columns to fit content
+    for (int col = 0; col < model->columnCount(); ++col) {
+        tableView->resizeColumnToContents(col);
+    }
+}
 void MainWindow::addFolder(const QString &folderName) {
     QDir newDir(mediaFolder + "/" + folderName);
     if (!newDir.exists() && !newDir.mkpath(".")) {
@@ -88,3 +107,5 @@ void MainWindow::onFolderChanged(const QString &path) {
 void MainWindow::connectToEmby() {
     std::cout << "Feature not yet implemented\n";
 }
+
+

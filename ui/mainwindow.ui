@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="infoTab">
      <attribute name="title">
@@ -35,7 +35,7 @@
      <attribute name="title">
       <string>Movies</string>
      </attribute>
-     <widget class="QTableWidget" name="moviesTable">
+     <widget class="QTableView" name="moviesTable">
       <property name="geometry">
        <rect>
         <x>5</x>
@@ -50,16 +50,46 @@
      <attribute name="title">
       <string>Music</string>
      </attribute>
+     <widget class="QTableView" name="musicTable">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>561</width>
+        <height>341</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="showsTab">
      <attribute name="title">
       <string>Shows</string>
      </attribute>
+     <widget class="QTableView" name="showsTable">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>561</width>
+        <height>341</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="photosTab">
      <attribute name="title">
       <string>Photos</string>
      </attribute>
+     <widget class="QTableView" name="photoTable">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>561</width>
+        <height>341</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
@@ -69,7 +99,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
