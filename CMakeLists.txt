@@ -25,9 +25,9 @@ set(HEADERS
         #include/shift.h
         )
 
-#set(UI_FILES
-#        ui/mainwindow.ui
- #       )
+set(UI_FILES
+        ui/mainwindow.ui
+       )
 
 #set(RESOURCE_FILES
 #        resources/init.sql
@@ -38,6 +38,7 @@ add_executable(${PROJECT_NAME}
         ${HEADERS}
         ${UI_FILES}
         ${RESOURCE_FILES}
+        ui/mainwindow.ui
         )
 
 # Link Qt libraries

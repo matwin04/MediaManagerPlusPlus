@@ -38,11 +38,13 @@ void MainWindow::setupDatabase() {
     executeSql("./sql/shows.sql");
     executeSql("./sql/movies.sql");
     executeSql("./sql/music.sql");
+    executeSql("./sql/photos.sql");
 
     // Create media subfolders
     addFolder("shows");
     addFolder("movies");
     addFolder("music");
+    addFolder("photos");
 }
 
 
