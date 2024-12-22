@@ -17,6 +17,7 @@ public:
     ~MainWindow() override;
 private slots:
     static void onFolderChanged(const QString &path);
+    void addNew(const QString &category);
     static void connectToEmby();
 private:
     QFileSystemWatcher *fileWatcher;

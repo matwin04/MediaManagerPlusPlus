@@ -9,7 +9,7 @@ set(CMAKE_AUTOUIC_SEARCH_PATHS ${CMAKE_SOURCE_DIR}/ui)
 
 # Try to find Qt6 first
 find_package(Qt6 COMPONENTS Core Sql Widgets QUIET)
-
+find_package(exiv2 REQUIRED)
 # If Qt6 is not found, fallback to Qt5
 if (NOT Qt6_FOUND)
     message(STATUS "Qt6 not found, falling back to Qt5.")
@@ -52,10 +52,10 @@ add_executable(${PROJECT_NAME}
         ${SOURCES}
         ${HEADERS}
         ${UI_FILES}
-)
+        addPhotos.cpp addPhotos.h)
 
 # Link Qt libraries dynamically based on Qt version
-target_link_libraries(${PROJECT_NAME} ${QT_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} ${QT_LIBRARIES} exiv2)
 
 # Include directories
 target_include_directories(${PROJECT_NAME} PRIVATE include)

@@ -55,6 +55,7 @@ void MainWindow::setupDatabase() {
     addFolder("music");
     addFolder("photos");
 }
+
 void MainWindow::loadTableData(const QString &tableName, QTableView *tableView) {
     QSqlTableModel *model = new QSqlTableModel(this, db);
     model->setTable(tableName);
@@ -107,5 +108,6 @@ void MainWindow::onFolderChanged(const QString &path) {
 void MainWindow::connectToEmby() {
     std::cout << "Feature not yet implemented\n";
 }
+
 
 
