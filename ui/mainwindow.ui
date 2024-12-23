@@ -80,15 +80,27 @@
      <attribute name="title">
       <string>Photos</string>
      </attribute>
-     <widget class="QTableView" name="photoTable">
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
         <x>10</x>
         <y>10</y>
-        <width>561</width>
+        <width>511</width>
         <height>341</height>
        </rect>
       </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QTableView" name="photoTable"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="addPhotosButton">
+         <property name="text">
+          <string>Add Photos</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
    </widget>

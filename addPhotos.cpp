@@ -13,6 +13,10 @@
 #include <QImageReader>
 #include <exiv2/exiv2.hpp>
 #include <iostream>
+#include <QSqlQuery>
+#include <QSqlError>
+#include <QSqlTableModel>
+
 addPhotos::addPhotos(const QString &photosFolder, QWidget *parent)
     : QDialog(parent),photosFolder(photosFolder) {
     setWindowTitle("Add Photos To DB");
@@ -63,21 +67,49 @@ void addPhotos::extractSortPhoto(const QString &filePath) {
         return;
     }
 
-    QDate date = QDate::fromString(dateString,"yyyy:MM:dd HH:mm:ss");
-    if (!date.isValid()){
-        std::cerr << "" << std::endl;
+    qDebug() << "Retrived Raw Date: " << dateString;
+    QDateTime dateTime;
+    QStringList formats = {
+            "yyyy:MM:dd HH:mm:ss",  // Standard EXIF format
+            "yyyy-MM-ddTHH:mm:ss", // ISO-8601 format
+            "yyyy-MM-dd HH:mm:ss"  // Alternate format
+    };
+    for (const QString &format : formats) {
+        dateTime = QDateTime::fromString(dateString,format);
+        if (dateTime.isValid()){
+            break;
+        }
+    }
+    if (!dateTime.isValid()){
+        std::cerr << "DATE TIME NOT VALID OR IN FILE : " << filePath.toStdString() << std::endl;
         return;
     }
+
     QString targetFolder = QString("%1/%2/%3")
             .arg(photosFolder)
             .arg(cameraModel)
-            .arg(date.toString("yyyy-MM-dd"));
+            .arg(dateTime.date().toString("yyyy-MM-dd"));
     QDir dir;
     if (!dir.mkpath(targetFolder)){
         std::cerr << "Error Failed to create folder \n";
         return;
     }
-    QFile::copy(filePath,targetFolder+"/"+ QFileInfo(filePath).fileName());
+    QString newFilePath = targetFolder+"/"+ QFileInfo(filePath).fileName();
+    if (!QFile::copy(filePath,newFilePath)){
+        std::cerr << "Failed to copt to target folder\n";
+        return;
+    }
+    QSqlQuery query;
+    query.prepare("INSERT INTO photos (file_path, camera_model, date_taken) VALUES (:file_path, :camera_model, :date_taken)");
+    query.bindValue(":file_path", newFilePath);
+    query.bindValue(":camera_model", cameraModel);
+    query.bindValue(":date_taken", dateTime.toString("yyyy-MM-dd HH:mm:ss"));
+
+    if (!query.exec()) {
+        std::cerr << "Database Insert Error: " << query.lastError().text().toStdString() << std::endl;
+    } else {
+        qDebug() << "Photo added to database successfully.";
+    }
 
 }
 std::string addPhotos::getMetadata(const QString &filePath, const std::string &tagName) {

@@ -1,11 +1,13 @@
 #include "mainwindow.h"
 #include "ui/ui_mainwindow.h"
+#include "addPhotos.h"
 #include <QDir>
 #include <QFile>
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QSqlTableModel>
 #include <iostream>
+#include <QPushButton>
 
 QString MainWindow::mediaFolder = QDir::homePath() + "/mmpp";
 MainWindow::MainWindow(QWidget *parent)
@@ -19,6 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
     loadTableData("photos",ui->photoTable);
     fileWatcher->addPath(mediaFolder);
     connect(fileWatcher, &QFileSystemWatcher::directoryChanged, this, &MainWindow::onFolderChanged);
+    connect(ui->addPhotosButton, &QPushButton::clicked, [this]() { addNew("Photos"); });
 }
 
 MainWindow::~MainWindow() {
@@ -54,6 +57,8 @@ void MainWindow::setupDatabase() {
     addFolder("movies");
     addFolder("music");
     addFolder("photos");
+
+
 }
 
 void MainWindow::loadTableData(const QString &tableName, QTableView *tableView) {
@@ -107,6 +112,16 @@ void MainWindow::onFolderChanged(const QString &path) {
 
 void MainWindow::connectToEmby() {
     std::cout << "Feature not yet implemented\n";
+}
+
+void MainWindow::addNew(const QString &category) {
+    if (category == "Photos") {
+        QString photosFolder = QDir::homePath() + "/mmpp/photos";
+        addPhotos dialog(photosFolder,this);
+        dialog.exec();
+    } else {
+        std::cerr <<"????\n";
+    }
 }
 
 
